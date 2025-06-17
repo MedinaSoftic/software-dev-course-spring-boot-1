@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/album")
+@RequestMapping("/albums")
 public class AlbumController {
 
-    private final List<Album> album = new ArrayList<>() {{
+    private List<Album> albums = new ArrayList<>() {{
         add(new Album("I Said I Love You First", "Selena Gomez",2025, 14));
         add(new Album("Rare", "Selena Gomez", 2020, 13));
         add(new Album("For You", "Selena Gomez", 2014, 15));
@@ -18,13 +18,13 @@ public class AlbumController {
 
     @GetMapping("/json")
     public List<Album> getAlbumJson() {
-        return album;
+        return albums;
     }
 
     @GetMapping("/html")
     public String getAlbumHtml() {
         String albumList = "<ul>";
-        for (Album album : album) {
+        for (Album album : albums) {
             albumList += "<li>" + album + "</li>";
         }
         albumList += "</ul>";
@@ -37,9 +37,9 @@ public class AlbumController {
                 """ +
                 albumList +
                 """
-                        </ul>
+                    </ul>
                     </body>
+                </html>
                 """;
     }
-
 }

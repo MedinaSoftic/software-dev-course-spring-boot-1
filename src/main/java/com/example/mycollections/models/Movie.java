@@ -9,6 +9,10 @@ public class Movie extends LibraryItem {
         this.director = director;
         this.runtime = runtime;
     }
+    @Override
+    public String toString() {
+        return getName() + " by " + director + " ( " +getYear() + ") -" + runtime + "tracks";
+    }
 
     public String getDirector() {
         return director;

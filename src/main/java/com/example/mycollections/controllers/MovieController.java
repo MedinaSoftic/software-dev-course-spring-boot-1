@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/movie")
+@RequestMapping("/movies")
 public class MovieController {
 
     private final List<Movie> movie = new ArrayList<>() {{
@@ -39,7 +39,7 @@ public class MovieController {
                 """
                         </ul>
                     </body>
+                <html>
                 """;
     }
-
 }

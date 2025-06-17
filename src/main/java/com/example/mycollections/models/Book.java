@@ -9,6 +9,10 @@ public class Book extends LibraryItem {
         this.author = author;
         this.pages = pages;
     }
+    @Override
+    public String toString() {
+        return getName() + " by " + author + " ( " +getYear() + ") -" + year;
+    }
 
     public String getAuthor() {
         return author;

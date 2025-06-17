@@ -9,6 +9,10 @@ public class Album extends LibraryItem {
         this.artist = artist;
         this.tracks = tracks;
     }
+    @Override
+    public String toString() {
+        return getName() + " by " + artist + " ( " +getYear() + ") -" + tracks + "tracks";
+    }
 
     public String getArtist() {
         return artist;
